@@ -1,4 +1,4 @@
-local function addMessage(title, text, color)
+local function addChatMessage(title, text, color)
   TriggerEvent('chat:addMessage', {
     args = { title, text },
     color = color or Config.defaultColor
@@ -10,5 +10,5 @@ RegisterNetEvent('esxchat:showMessage', function(data)
     return
   end
 
-  addMessage(data.title or 'System', data.text, data.color or Config.defaultColor)
+  addChatMessage(data.title or 'System', data.text, data.color or Config.defaultColor)
 end)
